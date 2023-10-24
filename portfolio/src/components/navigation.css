@@ -14,7 +14,7 @@ body {
 }
 
 .logo img {
-  width: 70px;
+  width: 80px;
 }
 .navigation {
   color: white;
@@ -23,7 +23,7 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.navigation > h1 {
-  font-family: "Kanit", sans-serif;
+.navigation > h3 {
   color: white;
+  margin-right: 20px;
 }

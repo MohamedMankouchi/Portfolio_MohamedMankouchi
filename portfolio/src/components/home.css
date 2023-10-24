@@ -1,0 +1,21 @@
+.home h1 {
+  font-size: 45px;
+  margin-top: 0px;
+}
+
+.home p {
+  margin-bottom: 30px;
+}
+
+.home {
+  margin-top: 30px;
+  color: white;
+  padding: 10px;
+}
+
+.home span {
+  background-color: #9d00ff;
+  color: #ffffff;
+  box-shadow: 2px 5px 50px -1px #9d00ff;
+  border-radius: 10px;
+}
