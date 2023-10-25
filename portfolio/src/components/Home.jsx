@@ -15,16 +15,19 @@ export const Home = () => {
             MANKOUCHI
           </span>
         </p>
-        <img className="me" src={Me} />
-        <div className="dotDiv">
-          <img className="dots" src={Dots} />
+
+        <div style={{ position: "relative" }}>
+          <img className="me" src={Me} />
+          <div className="dotDiv">
+            <img className="dots" src={Dots} />
+          </div>
+          <h1>
+            Passionated <br />
+            Full-Stack developer <br />
+            that makes things for the{" "}
+            <span className="specialWord">{specialWord}</span>
+          </h1>
         </div>
-        <h1>
-          Passionated <br />
-          Full-Stack developer <br />
-          that makes things for the{" "}
-          <span className="specialWord">{specialWord}</span>
-        </h1>
       </div>
     </>
   );
