@@ -64,6 +64,7 @@ body {
   z-index: -1;
   position: absolute;
   opacity: 0.4;
+  transform: skew(351deg, 0deg);
 }
 
 .text a {

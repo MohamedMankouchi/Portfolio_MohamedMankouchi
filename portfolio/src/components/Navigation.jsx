@@ -71,7 +71,7 @@ export const Navigation = () => {
               className="headerContainer"
             >
               <div className="headerContainer-title">
-                <motion.div className="decorNav">
+                <div className="decorNav">
                   <svg
                     width="900"
                     height="887"
@@ -172,7 +172,8 @@ export const Navigation = () => {
                       fill="#1C5F9A"
                     ></path>
                   </svg>
-                </motion.div>
+                </div>
+
                 <div className="headerContainer-nav">
                   <h1 style={{ color: "white" }}>Mankouchi</h1>
                   <img
