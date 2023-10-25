@@ -1,6 +1,6 @@
 import React from "react";
 import "./skills.css";
-export const Skills = () => {
+  export const Skills = () => {
   const img = [
     {
       image:
