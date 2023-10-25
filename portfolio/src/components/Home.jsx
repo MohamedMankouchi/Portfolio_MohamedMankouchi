@@ -9,7 +9,7 @@ export const Home = () => {
   return (
     <>
       <div className="home">
-        <p>Hi! I'm Mohamed Mankouchi</p>
+        <h3>Hi! I'M MOHAMED MANKOUCHI</h3>
         <img className="me" src={Me} />
         <div className="dotDiv">
           <img className="dots" src={Dots} />

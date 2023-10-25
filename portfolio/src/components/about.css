@@ -1,0 +1,27 @@
+.about {
+  padding: 10px;
+}
+
+.about-title {
+  color: white;
+  line-height: 10px;
+}
+
+.about-title h1 {
+  font-size: 45px;
+}
+
+.about-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.about-info img {
+  width: 250px;
+  border-radius: 50%;
+  height: 250px;
+  object-fit: cover;
+}

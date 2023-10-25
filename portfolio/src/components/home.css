@@ -2,18 +2,17 @@
   font-size: 45px;
   margin-top: 0px;
   position: absolute;
-  bottom: 3.5%;
+  bottom: 8.5%;
 }
 
-.home p {
-  margin-bottom: 50px;
+.home h3 {
   font-size: 20px;
 }
 
 .home {
   position: relative;
   color: white;
-  padding: 10px;
+  padding: 15px;
 }
 
 .home span {
