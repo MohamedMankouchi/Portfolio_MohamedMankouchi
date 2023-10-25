@@ -20,3 +20,44 @@
   display: flex;
   justify-content: center;
 }
+
+.skills-explaination {
+  padding: 10px;
+  color: white;
+}
+.skills-explaination p {
+  margin-top: 20px;
+  font-size: 14px;
+}
+.skills-explaination span {
+  color: #9d00ff;
+  font-weight: bold;
+}
+
+.skills-languages {
+  padding: 10px;
+}
+
+.skills-languages-img img {
+  width: 65px;
+  height: 65px;
+  border-radius: 20%;
+  object-fit: cover;
+}
+
+.skills-languages-img {
+  width: max-content;
+  height: max-content;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+}
+
+.skills-languages-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px;
+  background-color: #20202a;
+  border-radius: 10px;
+}
