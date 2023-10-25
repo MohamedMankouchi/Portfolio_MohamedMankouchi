@@ -9,7 +9,12 @@ export const Home = () => {
   return (
     <>
       <div className="home">
-        <h3>Hi! I'M MOHAMED MANKOUCHI</h3>
+        <p>
+          Hi! I'M MOHAMED{" "}
+          <span style={{ color: "#9d00ff", fontWeight: "bold" }}>
+            MANKOUCHI
+          </span>
+        </p>
         <img className="me" src={Me} />
         <div className="dotDiv">
           <img className="dots" src={Dots} />
@@ -17,7 +22,8 @@ export const Home = () => {
         <h1>
           Passionated <br />
           Full-Stack developer <br />
-          that makes things for the <span>{specialWord}</span>
+          that makes things for the{" "}
+          <span className="specialWord">{specialWord}</span>
         </h1>
       </div>
     </>

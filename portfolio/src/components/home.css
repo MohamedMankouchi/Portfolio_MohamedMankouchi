@@ -5,8 +5,8 @@
   bottom: 8.5%;
 }
 
-.home h3 {
-  font-size: 20px;
+.home p {
+  font-size: 14px;
 }
 
 .home {
@@ -15,7 +15,7 @@
   padding: 15px;
 }
 
-.home span {
+span.specialWord {
   background-color: #9d00ff;
   color: #ffffff;
   box-shadow: 2px 5px 50px -1px #9d00ff;
