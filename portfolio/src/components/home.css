@@ -2,7 +2,7 @@
   font-size: 45px;
   margin-top: 0px;
   position: absolute;
-  bottom: 50px;
+  bottom: 80px;
 }
 
 .home p {
@@ -11,7 +11,8 @@
 }
 
 .home {
-  margin-top: 50px;
+  position: relative;
+  margin-top: 30px;
   color: white;
   padding: 10px;
 }
