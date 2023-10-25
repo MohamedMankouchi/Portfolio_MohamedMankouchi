@@ -1,7 +1,11 @@
-import React from 'react'
+import React from "react";
 
 export const About = () => {
   return (
-    <div>About</div>
-  )
-}
+    <>
+      <div className="about">
+        <h3>ABOUT ME</h3>
+      </div>
+    </>
+  );
+};
