@@ -10,14 +10,16 @@ export const About = () => {
         </div>
         <div className="about-info">
           <img src={Me} alt="" />
-          <p>
-            I'm a <span>goal-oriented </span>full-stack developer with a passion
-            for coding and a particular fondness for JavaScript. I thrive on the
-            thrill of turning ideas into functional, elegant, and user-friendly
-            web applications. My journey in the world of programming is a
-            continuous quest to master my crafts and stay at the forefront of
-            technology.{" "}
-          </p>
+          <div className="about-text">
+            <p>
+              I'm a <span>goal-oriented </span>full-stack developer with a
+              passion for coding and a particular fondness for JavaScript. I
+              thrive on the thrill of turning ideas into functional, elegant,
+              and user-friendly web applications. My journey in the world of
+              programming is a continuous quest to master my crafts and stay at
+              the forefront of technology.{" "}
+            </p>
+          </div>
         </div>
       </div>
     </>
