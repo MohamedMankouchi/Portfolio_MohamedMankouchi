@@ -10,9 +10,17 @@ body {
 }
 
 .logo img {
-  width: 80px;
+  width: 50px;
 }
 .navigation {
+  position: fixed;
+  background-color: #1c1c1f;
+  box-shadow: -15px 14px 19px -15px white;
+  -webkit-box-shadow: -15px 14px 19px -15px white;
+  -moz-box-shadow: -15px 14px 19px -15px white;
+  top: 0px;
+  z-index: 2;
+  width: 100vw;
   color: white;
   padding: 10px;
   display: flex;

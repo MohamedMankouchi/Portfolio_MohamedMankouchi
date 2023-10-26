@@ -1,9 +1,17 @@
-import { React, useState } from "react";
+import { React, useEffect, useState } from "react";
 import "./navigation.css";
 import Logo from "./../assets/logo.png";
 import Menu from "./../assets/hamburgermenu.png";
 import Cross from "./../assets/cross.png";
-import { AnimatePresence, easeInOut, motion, spring } from "framer-motion";
+import {
+  AnimatePresence,
+  easeInOut,
+  motion,
+  spring,
+  useMotionValue,
+  useMotionValueEvent,
+  useScroll,
+} from "framer-motion";
 import { Link } from "react-router-dom";
 const navLinks = [
   { title: "Home", href: "/" },
@@ -13,10 +21,21 @@ const navLinks = [
   { title: "Contact", href: "/" },
 ];
 export const Navigation = () => {
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(false);
   const [open, setOpen] = useState(false);
   const toggleMenu = () => {
     setOpen((prevOpen) => !prevOpen);
   };
+
+  useMotionValueEvent(scrollY, "change", (prev) => {
+    const previous = scrollY.getPrevious();
+    if (prev > previous && prev > 100) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
   const menuVars = {
     initial: {
       scaleY: 0,
@@ -55,12 +74,27 @@ export const Navigation = () => {
   return (
     <>
       <header>
-        <div className="navigation">
+        <motion.div
+          variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
+          animate={hidden ? "hidden" : "visible"}
+          transition={{ duration: 1, ease: "backInOut" }}
+          className="navigation"
+          style={
+            hidden
+              ? { boxShadow: "none" }
+              : { boxShadow: "-15px 14px 19px -15px white" }
+          }
+        >
           <div className="logo">
             <img src={Logo} alt="" />
           </div>
-          <img style={{ width: "50px" }} onClick={toggleMenu} src={Menu} />
-        </div>
+          <img
+            style={{ width: "50px", marginRight: "20px" }}
+            onClick={toggleMenu}
+            src={Menu}
+          />
+        </motion.div>
+
         <AnimatePresence>
           {open && (
             <motion.div

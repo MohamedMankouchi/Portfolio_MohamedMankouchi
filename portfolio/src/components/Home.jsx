@@ -1,6 +1,5 @@
 import React from "react";
 import "./home.css";
-import { Decor } from "./Decor";
 import Me from "./../assets/me.jpeg";
 import Dots from "./../assets/side-dots.png";
 
