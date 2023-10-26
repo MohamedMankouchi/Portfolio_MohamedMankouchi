@@ -36,19 +36,20 @@ export const Navigation = () => {
       setHidden(false);
     }
   });
+
   const menuVars = {
     initial: {
-      scaleY: 0,
+      y: "-100%",
     },
     animate: {
-      scaleY: 1,
+      y: 0,
       transition: {
-        duration: 0.4,
+        duration: 1,
         ease: "easeInOut",
       },
     },
     exit: {
-      scaleY: 0,
+      y: "-100%",
       transition: {
         delay: 0.7,
         duration: 0.4,
@@ -248,15 +249,15 @@ const mobileLinkVars = {
   initial: {
     y: "30vh",
     transition: {
-      duration: 0.5,
-      ease: [0.37, 0, 0.63, 1],
+      duration: 1,
+      ease: easeInOut,
     },
   },
   open: {
     y: 0,
     transition: {
-      ease: [0, 0.55, 0.45, 1],
-      duration: 0.7,
+      ease: easeInOut,
+      duration: 1,
     },
   },
 };
