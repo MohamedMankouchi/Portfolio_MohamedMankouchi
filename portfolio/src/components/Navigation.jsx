@@ -80,11 +80,6 @@ export const Navigation = () => {
           animate={hidden ? "hidden" : "visible"}
           transition={{ duration: 1, ease: "backInOut" }}
           className="navigation"
-          style={
-            hidden
-              ? { boxShadow: "none" }
-              : { boxShadow: "-15px 14px 19px -15px white" }
-          }
         >
           <div className="logo">
             <img src={Logo} alt="" />
