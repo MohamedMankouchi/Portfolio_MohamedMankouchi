@@ -1,6 +1,8 @@
 import React from "react";
 import "./home.css";
 import Me from "./../assets/me.jpeg";
+import Me2 from "./../assets/me2.jpg";
+
 import Dots from "./../assets/side-dots.png";
 
 export const Home = () => {
@@ -16,7 +18,7 @@ export const Home = () => {
         </p>
 
         <div style={{ position: "relative" }}>
-          <img className="me" src={Me} />
+          <img className="me" src={Me2} />
           <div className="dotDiv">
             <img className="dots" src={Dots} />
           </div>
