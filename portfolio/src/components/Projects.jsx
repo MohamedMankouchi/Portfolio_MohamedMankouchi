@@ -5,7 +5,7 @@ import Github from "./../assets/githubLink.png";
 import { Link } from "react-router-dom";
 import Multipharma from "./../assets/Multipharma.png";
 import Arrow from "./../assets/arrow.png";
-
+import Decor from "./../assets/decor.png";
 const projects = [
   {
     name: "Quiz.IO",
@@ -56,6 +56,9 @@ export const Projects = () => {
         </div>
 
         <div className="projects-card-container">
+          <div className="decorContainer">
+            <img src={Decor} />
+          </div>
           {projects.map((el) => (
             <div className="projects-card">
               <Link to={el.githubLink} target="_blank">

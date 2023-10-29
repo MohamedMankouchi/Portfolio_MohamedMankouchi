@@ -35,6 +35,7 @@
   font-weight: bold;
 }
 .projects-card-container {
+  position: relative;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -113,6 +114,15 @@
 }
 
 .link img {
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
+}
+
+.decorContainer {
+  filter: blur(6px);
+  z-index: -1;
+  position: absolute;
+  opacity: 0.4;
+  overflow: hidden !important;
+  width: 100vw;
 }
