@@ -125,7 +125,7 @@
   opacity: 0.4;
   overflow: hidden !important;
   width: 100vw;
-  top: 40%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
