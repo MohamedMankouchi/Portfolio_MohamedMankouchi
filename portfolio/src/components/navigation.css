@@ -14,7 +14,7 @@ body {
 }
 .navigation {
   position: fixed;
-  background-color: #20202a;
+  background-color: #1c1c1f;
   top: 0px;
   z-index: 2;
   width: 100vw;

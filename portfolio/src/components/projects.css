@@ -47,6 +47,7 @@
   border-radius: 10px;
   background-color: #20202a;
   width: 250px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .projects-card a {
@@ -125,7 +126,7 @@
   opacity: 0.4;
   overflow: hidden !important;
   width: 100vw;
-  top: 10%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
