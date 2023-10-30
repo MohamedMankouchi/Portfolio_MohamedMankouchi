@@ -74,13 +74,13 @@
   z-index: -1;
 }
 
-.starsCanvas canvas {
-  touch-action: auto !important;
-}
-
 .stars,
 .earth {
   touch-action: auto !important;
+}
+
+.earthCanvas {
+  height: 280px;
 }
 .send {
   display: flex;
