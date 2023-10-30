@@ -30,6 +30,7 @@ export const EarthCanvas = () => {
         <OrbitControls
           autoRotate
           enableZoom={false}
+          enableRotate={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
