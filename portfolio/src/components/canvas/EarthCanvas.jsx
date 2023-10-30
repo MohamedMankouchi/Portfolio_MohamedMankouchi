@@ -5,7 +5,6 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "./CanvasLoader";
 const Earth = () => {
   const earth = useGLTF("./planet/scene.gltf");
-
   return (
     <primitive object={earth.scene} scale={3} position-y={0} rotation-y={0} />
   );
@@ -15,7 +14,7 @@ export const EarthCanvas = () => {
   return (
     <div className="earthCanvas">
       <Canvas
-        style={{ height: "250px", touchAction: "auto" }}
+        style={{ height: "280px", touchAction: "auto !important" }}
         shadows
         frameloop="demand"
         dpr={[1, 2]}

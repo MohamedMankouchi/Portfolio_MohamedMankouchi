@@ -32,7 +32,10 @@ const Stars = (props) => {
 const StarsCanvas = () => {
   return (
     <div className="starsCanvas">
-      <Canvas camera={{ position: [0, 0, 1] }}>
+      <Canvas
+        camera={{ position: [0, 0, 1] }}
+        style={{ touchAction: "auto !important" }}
+      >
         <Suspense fallback={null}>
           <Stars />
         </Suspense>
