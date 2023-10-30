@@ -64,8 +64,8 @@ export const Skills = () => {
 
         <div className="skills-languages">
           <div className="skills-languages-wrapper">
-            {img.map((el) => (
-              <div className="skills-languages-img">
+            {img.map((el, index) => (
+              <div key={index} className="skills-languages-img">
                 <img src={el.image} />
               </div>
             ))}
