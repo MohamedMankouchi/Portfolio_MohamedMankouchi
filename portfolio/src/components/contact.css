@@ -64,6 +64,7 @@
 .contact {
   position: relative;
   overflow: hidden;
+  margin-bottom: 50px;
 }
 
 .starsCanvas {
