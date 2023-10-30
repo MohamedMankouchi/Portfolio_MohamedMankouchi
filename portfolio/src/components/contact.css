@@ -74,6 +74,14 @@
   z-index: -1;
 }
 
+.starsCanvas canvas {
+  touch-action: auto !important;
+}
+
+.starsCanvas canvas,
+.earthCanvas canvas {
+  touch-action: auto !important;
+}
 .send {
   display: flex;
   align-items: center;
