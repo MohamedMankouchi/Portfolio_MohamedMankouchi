@@ -78,8 +78,8 @@
   touch-action: auto !important;
 }
 
-.starsCanvas canvas,
-.earthCanvas canvas {
+.stars,
+.earth {
   touch-action: auto !important;
 }
 .send {

@@ -14,7 +14,7 @@ export const EarthCanvas = () => {
   return (
     <div className="earthCanvas">
       <Canvas
-        style={{ height: "280px", touchAction: "auto !important" }}
+        className="earth"
         shadows
         frameloop="demand"
         dpr={[1, 2]}
