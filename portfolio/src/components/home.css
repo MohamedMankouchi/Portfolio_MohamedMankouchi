@@ -70,3 +70,37 @@ img.dots {
     font-size: 16px;
   }
 }
+
+@media (min-width: 1024px) {
+  .home {
+    display: grid;
+  }
+  .home-desc {
+    position: relative;
+    height: 500px;
+    width: 1000px;
+    place-self: center;
+  }
+
+  .home h1 {
+    position: absolute;
+    font-size: 65px;
+    z-index: 2;
+    top: 40%;
+  }
+
+  .home p {
+    position: absolute;
+    z-index: 2;
+    padding: 6px;
+    top: 30%;
+  }
+
+  img.me {
+    position: absolute;
+    right: 0px;
+    height: 500px;
+    width: 400px;
+    right: 3%;
+  }
+}

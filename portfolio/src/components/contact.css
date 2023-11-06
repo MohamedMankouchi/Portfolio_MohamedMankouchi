@@ -98,3 +98,24 @@
   width: 15px;
   height: 15px;
 }
+
+@media (min-width: 1024px) {
+  .flexContact {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    padding: 20px;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contact-form {
+    grid-area: contact;
+    width: 400px;
+  }
+  .earthCanvas {
+    grid-area: earth;
+    height: 400px;
+    width: 500px;
+  }
+}

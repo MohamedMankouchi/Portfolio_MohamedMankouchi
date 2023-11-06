@@ -10,14 +10,13 @@ export const Home = () => {
   return (
     <>
       <div className="home">
-        <p>
-          Hi! I'M MOHAMED{" "}
-          <span style={{ color: "#9d00ff", fontWeight: "bold" }}>
-            MANKOUCHI
-          </span>
-        </p>
-
-        <div style={{ position: "relative" }}>
+        <div className="home-desc" style={{ position: "relative" }}>
+          <p>
+            Hi! I'M MOHAMED{" "}
+            <span style={{ color: "#9d00ff", fontWeight: "bold" }}>
+              MANKOUCHI
+            </span>
+          </p>
           <img className="me" src={Me2} />
           <div className="dotDiv">
             <img className="dots" src={Dots} />

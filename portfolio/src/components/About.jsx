@@ -12,7 +12,9 @@ export const About = () => {
           <h3>ABOUT ME</h3>
         </div>
         <div className="about-info">
-          <h1>MOHAMED MANKOUCHI </h1>
+          <div className="about-info--name">
+            <h1>MOHAMED MANKOUCHI </h1>
+          </div>
           <div className="about-image">
             <div className="about-image-links">
               <Link to={"https://github.com/MohamedMankouchi"} target="_blank">
@@ -26,6 +28,18 @@ export const About = () => {
               </Link>
             </div>
             <img src={Me} alt="" />
+          </div>
+
+          <div className="about-image-links--desktop">
+            <Link to={"https://github.com/MohamedMankouchi"} target="_blank">
+              <img src={Github} alt="" />
+            </Link>
+            <Link
+              to={"https://www.linkedin.com/in/mohamed-mankouchi-113009234/"}
+              target="_blank"
+            >
+              <img src={Linkedin} alt="" />
+            </Link>
           </div>
           <div className="about-text">
             <p>

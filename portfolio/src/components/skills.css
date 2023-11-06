@@ -75,3 +75,19 @@
     padding: 40px;
   }
 }
+
+@media (min-width: 1024px) {
+  .skills-languages {
+    display: grid;
+  }
+
+  .skills-languages-wrapper {
+    place-self: center;
+    width: 90%;
+  }
+
+  .skills-explaination {
+    display: flex;
+    justify-content: center;
+  }
+}

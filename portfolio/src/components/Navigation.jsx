@@ -75,6 +75,15 @@ export const Navigation = () => {
   return (
     <>
       <header>
+        <div className="navigation-desktop">
+          <div className="navigation-desktop--bar">
+            <Link>Home</Link>
+            <Link>About me</Link>
+            <Link>Skills</Link>
+            <Link>Projects</Link>
+            <Link>Contact</Link>
+          </div>
+        </div>
         <motion.div
           variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
           animate={hidden ? "hidden" : "visible"}

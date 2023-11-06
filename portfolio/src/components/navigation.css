@@ -24,6 +24,10 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+
+.navigation-desktop {
+  display: none;
+}
 .navigation > h3 {
   color: white;
   margin-right: 20px;
@@ -79,4 +83,32 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   font-family: "Gabarito", sans-serif;
+}
+
+@media (min-width: 1024px) {
+  .navigation {
+    display: none;
+  }
+
+  .navigation-desktop {
+    display: block;
+    padding: 20px;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index: 3;
+  }
+
+  .navigation-desktop--bar {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: #20202a;
+  }
+
+  .navigation-desktop--bar a {
+    text-decoration: none;
+    color: white;
+  }
 }
