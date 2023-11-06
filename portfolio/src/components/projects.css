@@ -130,3 +130,20 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@media (min-width: 768px) {
+  .projects-explaination p {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .about-info {
+    text-align: center;
+    display: grid;
+    place-items: center;
+  }
+
+  .about-image {
+    width: 400px;
+  }
+}

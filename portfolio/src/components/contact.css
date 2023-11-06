@@ -8,6 +8,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 .contact-title h3 {
@@ -26,6 +27,7 @@
   background-color: #20202a;
   padding: 10px;
   color: white;
+  margin-top: 20px;
 }
 
 .contact-form form {

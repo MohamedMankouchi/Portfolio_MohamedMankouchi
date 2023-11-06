@@ -2,7 +2,7 @@ import React from "react";
 import "./home.css";
 import Me from "./../assets/me.jpeg";
 import Me2 from "./../assets/me2.jpg";
-
+import "./../App.css";
 import Dots from "./../assets/side-dots.png";
 
 export const Home = () => {
