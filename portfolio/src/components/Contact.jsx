@@ -6,7 +6,7 @@ import Arrow from "./../assets/arrow.png";
 export const Contact = () => {
   return (
     <>
-      <div className="contact">
+      <div className="contact" id="contact">
         <div className="contact-title">
           <h3>CONTACT</h3>
         </div>

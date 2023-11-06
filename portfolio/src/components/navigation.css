@@ -69,6 +69,18 @@ body {
   font-size: 30px;
 }
 
+.active {
+  background-color: white;
+  border-radius: 20px;
+  color: black !important;
+  height: 40px;
+  transition: 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
 .decorNav {
   filter: blur(6px);
   z-index: -1;
@@ -92,6 +104,7 @@ body {
 
   .navigation-desktop {
     display: block;
+    width: 650px;
     padding: 20px;
     position: fixed;
     left: 50%;
@@ -101,14 +114,21 @@ body {
 
   .navigation-desktop--bar {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 30px;
     padding: 20px;
+    height: 30px;
     border-radius: 50px;
     background-color: #20202a;
   }
 
   .navigation-desktop--bar a {
     text-decoration: none;
+    cursor: pointer;
     color: white;
+    width: 100px;
+    border-radius: 20px;
+    text-align: center;
   }
 }

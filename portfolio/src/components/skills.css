@@ -81,9 +81,25 @@
     display: grid;
   }
 
+  .skills-explaination p {
+    font-size: 20px;
+  }
+
   .skills-languages-wrapper {
     place-self: center;
-    width: 90%;
+    width: 540px;
+    padding: 50px;
+    gap: 40px;
+  }
+
+  .skills-languages-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .skills-languages-img img {
+    width: 80px;
+    height: 80px;
   }
 
   .skills-explaination {

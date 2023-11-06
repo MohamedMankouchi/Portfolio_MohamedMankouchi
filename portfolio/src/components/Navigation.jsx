@@ -3,6 +3,8 @@ import "./navigation.css";
 import Logo from "./../assets/logo.png";
 import Menu from "./../assets/hamburgermenu.png";
 import Cross from "./../assets/cross.png";
+import { Link } from "react-scroll";
+
 import {
   AnimatePresence,
   easeInOut,
@@ -12,13 +14,12 @@ import {
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
-import { Link } from "react-router-dom";
 const navLinks = [
-  { title: "Home", href: "/" },
-  { title: "About", href: "/" },
-  { title: "Skills", href: "/" },
-  { title: "Projects", href: "/" },
-  { title: "Contact", href: "/" },
+  { title: "Home", href: "#home" },
+  { title: "About", href: "#about" },
+  { title: "Skills", href: "#skills" },
+  { title: "Projects", href: "#projects" },
+  { title: "Contact", href: "#contact" },
 ];
 export const Navigation = () => {
   const { scrollY } = useScroll();
@@ -77,11 +78,56 @@ export const Navigation = () => {
       <header>
         <div className="navigation-desktop">
           <div className="navigation-desktop--bar">
-            <Link>Home</Link>
-            <Link>About me</Link>
-            <Link>Skills</Link>
-            <Link>Projects</Link>
-            <Link>Contact</Link>
+            <Link
+              to={"home"}
+              smooth="easeInOutQuint"
+              spy={true}
+              activeClass="active"
+              offset={-150}
+              duration={2500}
+            >
+              Home
+            </Link>
+            <Link
+              to={"about"}
+              smooth="easeInOutQuint"
+              spy={true}
+              activeClass="active"
+              offset={-60}
+              duration={2500}
+            >
+              About me
+            </Link>
+            <Link
+              to={"skills"}
+              smooth="easeInOutQuint"
+              spy={true}
+              activeClass="active"
+              offset={-60}
+              duration={2500}
+            >
+              Skills
+            </Link>
+            <Link
+              to={"projects"}
+              smooth="easeInOutQuint"
+              spy={true}
+              activeClass="active"
+              offset={-60}
+              duration={2500}
+            >
+              Projects
+            </Link>
+            <Link
+              to={"contact"}
+              smooth="easeInOutQuint"
+              spy={true}
+              activeClass="active"
+              offset={-60}
+              duration={2500}
+            >
+              Contact
+            </Link>
           </div>
         </div>
         <motion.div

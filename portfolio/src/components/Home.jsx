@@ -9,7 +9,7 @@ export const Home = () => {
   const specialWord = "<web>";
   return (
     <>
-      <div className="home">
+      <div className="home" id="home">
         <div className="home-desc" style={{ position: "relative" }}>
           <p>
             Hi! I'M MOHAMED{" "}

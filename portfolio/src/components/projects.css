@@ -151,3 +151,27 @@
     padding: 40px;
   }
 }
+
+@media (min-width: 1024px) {
+  .decorContainer img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .decorContainer {
+    top: 50%;
+    width: 100%;
+    height: 100%;
+  }
+  .projects-explaination p {
+    font-size: 20px;
+  }
+  .projects-card {
+    width: 280px;
+  }
+
+  .projects-explaination {
+    width: 60%;
+    margin: auto;
+  }
+}

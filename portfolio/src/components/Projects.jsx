@@ -42,7 +42,7 @@ const projects = [
 export const Projects = () => {
   return (
     <>
-      <div className="projects">
+      <div className="projects" id="projects">
         <div className="projects-title">
           <h3>PROJECTS</h3>
         </div>
