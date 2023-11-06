@@ -146,4 +146,8 @@
   .about-image {
     width: 400px;
   }
+
+  .projects-explaination {
+    padding: 40px;
+  }
 }
