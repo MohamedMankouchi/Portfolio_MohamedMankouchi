@@ -5,6 +5,7 @@ import Me2 from "./../assets/me2.jpg";
 import "./../App.css";
 import Dots from "./../assets/side-dots.png";
 import { gsap } from "gsap";
+import Typewriter from "typewriter-effect";
 
 export const Home = () => {
   const ref = useRef();
@@ -40,8 +41,14 @@ export const Home = () => {
           <h1>
             Passionated <br />
             Full-Stack developer <br />
-            that makes things for the{" "}
-            <span className="specialWord">{specialWord}</span>
+            that makes things for{" "}
+            <Typewriter
+              options={{
+                strings: ["web", "mobile"],
+                autoStart: true,
+                loop: true,
+              }}
+            />
           </h1>
         </div>
       </div>

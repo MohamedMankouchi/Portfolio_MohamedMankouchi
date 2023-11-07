@@ -3,6 +3,10 @@
   margin-top: 0px;
   position: absolute;
   bottom: 0px;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .home p {
@@ -15,11 +19,15 @@
   margin-top: 100px;
 }
 
-span.specialWord {
+span.specialWord,
+.Typewriter {
   background-color: #9d00ff;
   color: #ffffff;
   box-shadow: 2px 5px 50px -1px #9d00ff;
   border-radius: 10px;
+  width: max-content;
+  height: max-content;
+  padding-left: 10px;
 }
 
 .home button {
