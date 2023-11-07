@@ -22,7 +22,7 @@ export const Loader = () => {
           ease: "power4.inOut",
         },
         {
-          scale: 8,
+          scale: 5,
           opacity: 0,
         }
       );
