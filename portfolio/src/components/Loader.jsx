@@ -18,7 +18,7 @@ export const Loader = () => {
         ".counter",
         5,
         {
-          scale: 0.5,
+          scale: 1,
           ease: "power4.inOut",
         },
         {
@@ -37,11 +37,6 @@ export const Loader = () => {
           <CountUp start={0} duration={3.5} end={100} />
         </h1>
         <div className="overlay">
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
-          <div className="bar"></div>
           <div className="bar"></div>
           <div className="bar"></div>
           <div className="bar"></div>
