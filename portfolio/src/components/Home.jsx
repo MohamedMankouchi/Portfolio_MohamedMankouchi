@@ -9,21 +9,6 @@ import Typewriter from "typewriter-effect";
 
 export const Home = () => {
   const ref = useRef();
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.from(".mo", 1.5, {
-        delay: 0,
-        y: 700,
-        stagger: {
-          amount: 0.5,
-        },
-        ease: "power4.inOut",
-      });
-    }, ref);
-
-    return () => ctx.revert();
-  }, []);
-  const specialWord = "<web>";
   return (
     <>
       <div className="home" id="home" ref={ref}>
@@ -44,7 +29,7 @@ export const Home = () => {
             that makes things for{" "}
             <Typewriter
               options={{
-                strings: ["web", "mobile"],
+                strings: ["you", "web", "mobile"],
                 autoStart: true,
                 loop: true,
               }}
