@@ -6,7 +6,7 @@
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
-  gap: 20px;
+  column-gap: 20px;
 }
 
 .home p {
@@ -95,6 +95,7 @@ img.dots {
     font-size: 65px;
     z-index: 2;
     top: 40%;
+    height: max-content;
   }
 
   .home p {
@@ -110,5 +111,12 @@ img.dots {
     height: 500px;
     width: 400px;
     right: 3%;
+  }
+}
+
+@media (max-width: 426px) {
+  .home h1 {
+    display: block;
+    letter-spacing: 3px;
   }
 }
