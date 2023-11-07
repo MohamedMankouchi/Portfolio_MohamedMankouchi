@@ -34,8 +34,10 @@ const projects = [
     name: "Multipharma",
     img: Multipharma,
     desc: `Multipharma leads the Belgian pharmacy world as the largest cooperative. As a pioneer in pharmaceutical care, Multipharma wants to bring the pharmacist and the customer closer together by making high quality healthcare accessible and affordable to all.`,
-    githubLink: "https://github.com/MohamedMankouchi/SocketIO",
-    siteLink: "https://chatpulse.onrender.com/",
+    githubLink:
+      "https://xd.adobe.com/view/4e2ffad9-b0bc-4a22-8a0f-9ae144c5baf8-1b7c/",
+    siteLink:
+      "https://xd.adobe.com/view/4e2ffad9-b0bc-4a22-8a0f-9ae144c5baf8-1b7c/",
     type: "Design",
   },
 ];
