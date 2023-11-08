@@ -19,19 +19,6 @@ export const About = () => {
     hidden: { opacity: 1 },
   };
 
-  const imageAnimation = {
-    visible: {
-      opacity: 1,
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-      transition: {
-        ease: "easeInOut",
-        duration: 1,
-        delay: 0.3,
-      },
-    },
-    hidden: { opacity: 0 },
-  };
-
   return (
     <>
       <div className="about" id="about">
@@ -59,15 +46,7 @@ export const About = () => {
                 <img src={Linkedin} alt="" />
               </Link>
             </div>
-            <motion.img
-              variants={imageAnimation}
-              initial="hidden"
-              animate={mainControls}
-              loading="lazy"
-              src={Me}
-              alt=""
-              ref={ref}
-            />
+            <img loading="lazy" src={Me} alt="" ref={ref} />
           </motion.div>
 
           <div className="about-image-links--desktop">
