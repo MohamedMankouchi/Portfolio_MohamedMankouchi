@@ -7,8 +7,8 @@ import { Projects } from "./components/Projects";
 import PageScroll from "react-page-scroll";
 import { Contact } from "./components/Contact";
 import { Loader } from "./components/Loader";
-import { useEffect, useState } from "react";
-
+import { useEffect, useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -20,6 +20,7 @@ function App() {
       clearTimeout();
     };
   }, []);
+
   return (
     <>
       {!isLoading && (

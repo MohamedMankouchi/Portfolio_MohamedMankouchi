@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "./skills.css";
+import { motion, useInView, useAnimation } from "framer-motion";
 export const Skills = () => {
   const img = [
     {
@@ -49,6 +50,37 @@ export const Skills = () => {
       image: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
     },
   ];
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const mainControls = useAnimation();
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
+  const container = {
+    hidden: { opacity: 1, scale: 1 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+        ease: "easeInOut",
+        delay: 0.5,
+      },
+    },
+  };
+
+  const item = {
+    hidden: { opacity: 0, y: 25 },
+    visible: {
+      opacity: 1,
+      y: 0,
+    },
+  };
+
   return (
     <>
       <div className="skills" id="skills">
@@ -63,13 +95,23 @@ export const Skills = () => {
         </div>
 
         <div className="skills-languages">
-          <div className="skills-languages-wrapper">
+          <motion.div
+            ref={ref}
+            variants={container}
+            initial="hidden"
+            animate={mainControls}
+            className="skills-languages-wrapper"
+          >
             {img.map((el, index) => (
-              <div key={index} className="skills-languages-img">
+              <motion.div
+                variants={item}
+                key={index}
+                className="skills-languages-img"
+              >
                 <img src={el.image} />
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </>
