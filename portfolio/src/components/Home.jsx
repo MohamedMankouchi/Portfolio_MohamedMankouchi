@@ -49,7 +49,12 @@ export const Home = () => {
               MANKOUCHI
             </span>
           </p>
-          <LazyLoadImage className="me" src={Me2} effect="opacity" />
+          <LazyLoadImage
+            className="me"
+            src={Me2}
+            effect="opacity"
+            delayTime={1000}
+          />
           <div className="dotDiv">
             <img className="dots" src={Dots} loading="lazy" />
           </div>
