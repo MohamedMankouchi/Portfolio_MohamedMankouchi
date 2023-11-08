@@ -50,7 +50,7 @@ export const Home = () => {
           </p>
           <img className="me" src={Me2} />
           <div className="dotDiv">
-            <img className="dots" src={Dots} />
+            <img className="dots" src={Dots} loading="lazy" />
           </div>
           <h1 className="txt">
             Passionated <br />
