@@ -6,7 +6,6 @@ import "./../App.css";
 import Dots from "./../assets/side-dots.png";
 import { gsap } from "gsap";
 import Typewriter from "typewriter-effect";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 export const Home = () => {
   const ref = useRef();
 
@@ -49,12 +48,7 @@ export const Home = () => {
               MANKOUCHI
             </span>
           </p>
-          <LazyLoadImage
-            className="me"
-            src={Me2}
-            effect="opacity"
-            delayTime={1000}
-          />
+          <img className="me" src={Me2} loading="lazy" />
           <div className="dotDiv">
             <img className="dots" src={Dots} loading="lazy" />
           </div>
