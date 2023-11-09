@@ -22,6 +22,7 @@ export const Home = () => {
       opacity: 1,
       x: 0,
       transition: {
+        type: "smooth",
         ease: [0.17, 0.67, 0.83, 0.67],
         duration: 0.8,
       },
@@ -33,6 +34,7 @@ export const Home = () => {
     visible: {
       opacity: 0.7,
       transition: {
+        type: "smooth",
         delay: 0.5,
         ease: [0.17, 0.67, 0.83, 0.67],
       },
