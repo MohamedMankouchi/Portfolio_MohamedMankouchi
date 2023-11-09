@@ -95,7 +95,7 @@ export const Projects = () => {
         duration: 0.5,
       },
     },
-    hidden: { opacity: 0.1, scale: 0.98 },
+    hidden: { opacity: 0.3, scale: 0.98 },
   };
   return (
     <>
