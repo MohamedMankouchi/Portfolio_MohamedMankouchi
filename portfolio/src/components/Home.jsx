@@ -6,37 +6,38 @@ import "./../App.css";
 import Dots from "./../assets/side-dots.png";
 import { gsap } from "gsap";
 import Typewriter from "typewriter-effect";
+import { useAnimation, useInView, motion } from "framer-motion";
 export const Home = () => {
   const ref = useRef();
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
+  const item = {
+    hidden: { opacity: 0, x: -150 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        ease: [0.17, 0.67, 0.83, 0.67],
+        duration: 0.8,
+      },
+    },
+  };
 
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.fromTo(
-        ".me",
-        2,
-        {
-          opacity: 0,
-          ease: "expo.out",
-        },
-        {
-          opacity: 0.7,
-        }
-      );
-      gsap.fromTo(
-        ".txt",
-        1,
-        {
-          x: "-50%",
-          ease: "power4.inOut",
-        },
-        {
-          x: 0,
-        }
-      );
-    }, ref);
-
-    return () => ctx.revert();
-  }, []);
+  const item2 = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 0.7,
+      transition: {
+        delay: 0.5,
+        ease: [0.17, 0.67, 0.83, 0.67],
+      },
+    },
+  };
 
   return (
     <>
@@ -48,11 +49,27 @@ export const Home = () => {
               MANKOUCHI
             </span>
           </p>
-          <img className="me" src={Me2} loading="lazy" />
+          <motion.img
+            variants={item2}
+            initial="hidden"
+            animate={mainControls}
+            className="me"
+            src="https://res.cloudinary.com/dn1zsleur/image/upload/v1699548060/dgplhuba5g09z7t3eq3t.jpg"
+            loading="lazy"
+          />
           <div className="dotDiv">
-            <img className="dots" src={Dots} loading="lazy" />
+            <img
+              className="dots"
+              src="https://res.cloudinary.com/dn1zsleur/image/upload/v1699548163/fbt0pxcd8vqsdc75jgtj.png"
+              loading="lazy"
+            />
           </div>
-          <h1 className="txt">
+          <motion.h1
+            animate={mainControls}
+            initial="hidden"
+            variants={item}
+            className="txt"
+          >
             Passionated <br />
             Full-Stack developer <br />
             that makes things for{" "}
@@ -63,7 +80,7 @@ export const Home = () => {
                 loop: true,
               }}
             />
-          </h1>
+          </motion.h1>
         </div>
       </div>
     </>
