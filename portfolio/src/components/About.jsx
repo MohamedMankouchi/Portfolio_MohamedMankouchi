@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { inView, motion, useAnimation, useInView } from "framer-motion";
 export const About = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: "100px" });
   const mainControls = useAnimation();
   useEffect(() => {
     if (isInView) {
@@ -19,12 +19,30 @@ export const About = () => {
     hidden: { opacity: 1 },
   };
 
+  const containerTitle = {
+    visible: {
+      opacity: 1,
+      transition: {
+        ease: "easeInOut",
+        duration: 1.5,
+        type: "smooth",
+        delay: 1,
+      },
+    },
+    hidden: { opacity: 0.3 },
+  };
+
   return (
     <>
       <div className="about" id="about">
-        <div className="about-title">
-          <h3>ABOUT ME</h3>
-        </div>
+        <motion.div
+          variants={containerTitle}
+          initial="hidden"
+          animate={mainControls}
+          className="about-title"
+        >
+          <motion.h3>ABOUT ME</motion.h3>
+        </motion.div>
         <motion.div
           variants={container}
           initial="hidden"

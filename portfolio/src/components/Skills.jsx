@@ -52,45 +52,75 @@ export const Skills = () => {
   ];
 
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const ref2 = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-30px" });
+  const isInView2 = useInView(ref2, { once: true });
+
   const mainControls = useAnimation();
   useEffect(() => {
     if (isInView) {
       mainControls.start("visible");
     }
   }, [isInView]);
+
+  useEffect(() => {
+    if (isInView2) {
+      mainControls.start("visibleText");
+    }
+  }, [isInView2]);
   const container = {
     hidden: { opacity: 1, scale: 1 },
     visible: {
       opacity: 1,
       scale: 1,
       transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2,
+        delayChildren: 0.2,
+        staggerChildren: 0.15,
         ease: "easeInOut",
-        delay: 0.5,
+        delay: 1,
       },
     },
   };
 
+  const containerTitle = {
+    visibleText: {
+      opacity: 1,
+      transition: {
+        ease: "easeInOut",
+        duration: 1.5,
+        type: "smooth",
+      },
+    },
+    hidden: { opacity: 0.3 },
+  };
+
   const item = {
-    hidden: { opacity: 0, y: 25 },
+    hidden: { opacity: 0, y: 55 },
     visible: {
       opacity: 1,
       y: 0,
+      transition: {
+        ease: "easeInOut",
+        type: "smooth",
+      },
     },
   };
 
   return (
     <>
       <div className="skills" id="skills">
-        <div className="skills-title">
+        <motion.div
+          variants={containerTitle}
+          animate={mainControls}
+          initial="hidden"
+          className="skills-title"
+        >
           <h3>SKILLS</h3>
-        </div>
+        </motion.div>
         <div className="skills-explaination">
           <p>
-            <span>Full-Stack</span> knowledge with front-end development as main
-            expertise
+            <span ref={ref2}>Full-Stack</span> knowledge with front-end
+            development as main expertise
           </p>
         </div>
 

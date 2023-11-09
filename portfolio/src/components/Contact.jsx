@@ -1,18 +1,45 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./contact.css";
 import { EarthCanvas } from "./canvas/EarthCanvas";
 import StarsCanvas from "./canvas/Stars";
 import Arrow from "./../assets/arrow.png";
+import { useAnimation, useInView, motion } from "framer-motion";
 export const Contact = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
+
+  const containerTitle = {
+    visible: {
+      opacity: 1,
+      transition: {
+        ease: "easeInOut",
+        duration: 1.5,
+        type: "smooth",
+      },
+    },
+    hidden: { opacity: 0.3 },
+  };
+
   return (
     <>
       <div className="contact" id="contact">
-        <div className="contact-title">
+        <motion.div
+          animate={mainControls}
+          variants={containerTitle}
+          initial="hidden"
+          className="contact-title"
+        >
           <h3>CONTACT</h3>
-        </div>
+        </motion.div>
 
         <StarsCanvas />
-        <div className="flexContact">
+        <div ref={ref} className="flexContact">
           <EarthCanvas />
 
           <div className="contact-form">

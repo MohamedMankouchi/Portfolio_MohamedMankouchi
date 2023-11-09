@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./projects.css";
 import Quiz from "./../assets/quiz.jpg";
 import Github from "./../assets/githubLink.png";
@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Multipharma from "./../assets/Multipharma.png";
 import Arrow from "./../assets/arrow.png";
 import Decor from "./../assets/decor.png";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const projects = [
   {
@@ -42,15 +43,74 @@ const projects = [
   },
 ];
 export const Projects = () => {
+  const ref = useRef(null);
+  const ref2 = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const isInView2 = useInView(ref2, { once: true });
+  const mainControls = useAnimation();
+  const mainControls2 = useAnimation();
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
+  useEffect(() => {
+    if (isInView2) {
+      mainControls2.start("visibleContainer");
+    }
+  }, [isInView2]);
+  const containerTitle = {
+    visible: {
+      opacity: 1,
+      transition: {
+        ease: "easeInOut",
+        duration: 1.5,
+        type: "smooth",
+      },
+    },
+    hidden: { opacity: 0.3 },
+  };
+
+  const container = {
+    visibleContainer: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        ease: "easeInOut",
+        type: "smooth",
+        staggerChildren: 0.5,
+        delayChildren: 0.3,
+      },
+    },
+    hidden: { opacity: 1, scale: 1 },
+  };
+
+  const item = {
+    visibleContainer: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        ease: "easeInOut",
+        type: "smooth",
+        duration: 0.5,
+      },
+    },
+    hidden: { opacity: 0.1, scale: 0.98 },
+  };
   return (
     <>
       <div className="projects" id="projects">
-        <div className="projects-title">
+        <motion.div
+          variants={containerTitle}
+          initial="hidden"
+          animate={mainControls}
+          className="projects-title"
+        >
           <h3>PROJECTS</h3>
-        </div>
+        </motion.div>
 
         <div className="projects-explaination">
-          <p>
+          <p ref={ref}>
             I have successfully <span>completed</span> various individual and
             company projects, showcasing my skills and expertise. To explore a
             wider range of my work, simply continue scrolling below to discover
@@ -58,12 +118,18 @@ export const Projects = () => {
           </p>
         </div>
 
-        <div className="projects-card-container">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate={mainControls2}
+          className="projects-card-container"
+          ref={ref2}
+        >
           <div className="decorContainer">
             <img src={Decor} />
           </div>
           {projects.map((el, index) => (
-            <div key={index} className="projects-card">
+            <motion.div variants={item} key={index} className="projects-card">
               <Link to={el.githubLink} target="_blank">
                 <div className="icon">
                   <img
@@ -91,9 +157,9 @@ export const Projects = () => {
                   <img src={Arrow} />
                 </div>
               </Link>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </>
   );
