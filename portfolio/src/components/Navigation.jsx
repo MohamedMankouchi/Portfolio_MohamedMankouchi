@@ -265,7 +265,7 @@ export const Navigation = () => {
                 </div>
 
                 <div className="headerContainer-nav">
-                  <h1 style={{ color: "white" }}>Mankouchi</h1>
+                  <img src={Logo} style={{ width: "50px" }} />
                   <img
                     style={{ width: "50px" }}
                     onClick={toggleMenu}
