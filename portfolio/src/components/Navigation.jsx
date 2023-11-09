@@ -3,7 +3,7 @@ import "./navigation.css";
 import Logo from "./../assets/logo_1.png";
 import Menu from "./../assets/hamburgermenu.png";
 import Cross from "./../assets/cross.png";
-import { Link } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 import {
   AnimatePresence,
@@ -25,7 +25,7 @@ export const Navigation = () => {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
   const [open, setOpen] = useState(false);
-  const toggleMenu = () => {
+  const toggleMenu = (href) => {
     setOpen((prevOpen) => !prevOpen);
   };
 
@@ -286,6 +286,7 @@ export const Navigation = () => {
                           key={index}
                           title={link.title}
                           href={link.href}
+                          click={toggleMenu}
                         />
                       </div>
                     );
@@ -316,10 +317,20 @@ const mobileLinkVars = {
     },
   },
 };
-const MobileNavLink = ({ title, href }) => {
+
+const MobileNavLink = ({ title, href, click }) => {
+  let str = href;
+  str = str.slice(1);
   return (
     <motion.div variants={mobileLinkVars} className="text">
-      <Link to={href}>{title}</Link>
+      <Link
+        to={str}
+        duration={2500}
+        smooth="easeInOutQuint"
+        onClick={() => click(href)}
+      >
+        {title}
+      </Link>
     </motion.div>
   );
 };
