@@ -23,7 +23,7 @@ export const Home = () => {
       x: 0,
       transition: {
         type: "smooth",
-        ease: [0.17, 0.67, 0.83, 0.67],
+        ease: "easeInOut",
         duration: 0.8,
       },
     },
@@ -36,7 +36,7 @@ export const Home = () => {
       transition: {
         type: "smooth",
         delay: 0.5,
-        ease: [0.17, 0.67, 0.83, 0.67],
+        ease: "easeIn",
       },
     },
   };
