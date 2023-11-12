@@ -281,9 +281,8 @@ export const Navigation = () => {
                 >
                   {navLinks.map((link, index) => {
                     return (
-                      <div style={{ overflow: "hidden" }}>
+                      <div key={index} style={{ overflow: "hidden" }}>
                         <MobileNavLink
-                          key={index}
                           title={link.title}
                           href={link.href}
                           click={toggleMenu}
