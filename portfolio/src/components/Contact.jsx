@@ -43,7 +43,7 @@ export const Contact = () => {
     ) {
       return toast.error("Please fill in the missing fields.", {
         duration: 3000,
-        position: "top -center",
+        position: "bottom-center",
         style: {
           backgroundColor: "#20202a",
           color: "white",
@@ -66,7 +66,7 @@ export const Contact = () => {
         (result) => {
           toast.success("Message sent!", {
             duration: 3000,
-            position: "top -center",
+            position: "bottom-center",
             style: {
               backgroundColor: "#20202a",
               color: "white",
@@ -76,7 +76,7 @@ export const Contact = () => {
         (error) => {
           toast.error("An error has occured while sending the message!", {
             duration: 3000,
-            position: "top -center",
+            position: "bottom-center",
             style: {
               backgroundColor: "#20202a",
               color: "white",
