@@ -121,6 +121,7 @@ export const Contact = () => {
               <label htmlFor="email">Your email</label>
               <input
                 type="email"
+                required
                 name="user_email"
                 id="email"
                 value={formInputs.user_email}
