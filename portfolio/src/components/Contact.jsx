@@ -146,8 +146,8 @@ export const Contact = () => {
                 }
               />
             </form>
-            <div className="send">
-              <p onClick={(event) => handleForm(event)}>
+            <div className="send" onClick={(event) => handleForm(event)}>
+              <p>
                 Send <span>message</span>
               </p>
               <img src={Arrow} />
