@@ -23,7 +23,9 @@ function App() {
 
   return (
     <>
-      {!isLoading && (
+      {isLoading ? (
+        <Loader />
+      ) : (
         <>
           <Navigation />
           <Home />
@@ -33,7 +35,6 @@ function App() {
           <Contact />
         </>
       )}
-      <Loader />
     </>
   );
 }
