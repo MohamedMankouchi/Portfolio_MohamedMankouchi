@@ -77,7 +77,7 @@ export const Home = () => {
             that makes things for{" "}
             <Typewriter
               options={{
-                strings: ["you", "web", "mobile"],
+                strings: ["web", "mobile", "you"],
                 autoStart: true,
                 loop: true,
               }}
