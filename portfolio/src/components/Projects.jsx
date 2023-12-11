@@ -3,9 +3,10 @@ import "./projects.css";
 import Quiz from "./../assets/quiz.jpg";
 import Github from "./../assets/githubLink.png";
 import { Link } from "react-router-dom";
-import Multipharma from "./../assets/Multipharma.png";
 import Arrow from "./../assets/arrow.png";
 import Decor from "./../assets/decor.png";
+import Store from "./../assets/applestore.png";
+import Login from "./../assets/login.png";
 import { motion, useAnimation, useInView } from "framer-motion";
 
 const projects = [
@@ -15,7 +16,7 @@ const projects = [
     desc: `Quiz.IO is an online quiz game that offers an enjoyable gaming
   experience with the ability to play alongside friends. It serves
   as a counterpart to 'skribbl.io,' a well-known online
-  multiplayer drawing and guessing game`,
+  multiplayer drawing and guessing game.`,
     githubLink: "https://github.com/MohamedMankouchi/Quiz-App",
     siteLink: "https://quiz-io.onrender.com/",
     type: "Web",
@@ -31,15 +32,23 @@ const projects = [
     siteLink: "https://chatpulse.onrender.com/",
     type: "Web",
   },
+
   {
-    name: "Multipharma",
-    img: Multipharma,
-    desc: `Multipharma leads the Belgian pharmacy world as the largest cooperative. As a pioneer in pharmaceutical care, Multipharma wants to bring the pharmacist and the customer closer together by making high quality healthcare accessible and affordable to all.`,
-    githubLink:
-      "https://xd.adobe.com/view/4e2ffad9-b0bc-4a22-8a0f-9ae144c5baf8-1b7c/",
-    siteLink:
-      "https://xd.adobe.com/view/4e2ffad9-b0bc-4a22-8a0f-9ae144c5baf8-1b7c/",
-    type: "Design",
+    name: "3D Apple store",
+    img: Store,
+    desc: `3D Apple Store is an experimental website where users can explore Apple products in three-dimensional (3D) space. This platform provides a unique and immersive experience, allowing visitors to view Apple's range of products from various angles and perspectives.`,
+    githubLink: "https://github.com/MohamedMankouchi/3D",
+    siteLink: "https://threed-applestore.onrender.com/",
+    type: "Web",
+  },
+
+  {
+    name: "Login system",
+    img: Login,
+    desc: `I have implemented a login system utilizing well-known authentication methods such as Google and GitHub. It provides a simple and secure way for users to authenticate themselves.`,
+    githubLink: "https://github.com/MohamedMankouchi/LoginSystem",
+    siteLink: "https://loginsystem-anzg.onrender.com/",
+    type: "Web",
   },
 ];
 export const Projects = () => {
