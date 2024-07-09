@@ -12,6 +12,10 @@ export const Skills = () => {
     },
     {
       image:
+        "https://miro.medium.com/v2/resize:fit:1400/1*elhu-42TzQEdsFjKDbQhhA.png",
+    },
+    {
+      image:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png?20221110153201",
     },
     {
@@ -44,10 +48,6 @@ export const Skills = () => {
     {
       image:
         "https://www.linuxuntu.com/wp-content/uploads/2023/04/MySQL-Logo.jpg",
-    },
-
-    {
-      image: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
     },
   ];
 

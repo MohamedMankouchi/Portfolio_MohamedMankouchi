@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import "./projects.css";
 import Quiz from "./../assets/quiz.jpg";
+import Mate from "./../assets/Mate.jpg";
 import Github from "./../assets/githubLink.png";
 import { Link } from "react-router-dom";
 import Arrow from "./../assets/arrow.png";
@@ -10,6 +11,14 @@ import Login from "./../assets/login.png";
 import { motion, useAnimation, useInView } from "framer-motion";
 
 const projects = [
+  {
+    name: "Mate",
+    img: Mate,
+    desc: `Mate is a cutting-edge digital platform designed to enhance and enrich the academic experience for Brussels students. It fosters a vibrant online community where students can study, collaborate, share knowledge, and support one another, creating an environment where everyone can reach their full potential.`,
+    githubLink: "https://github.com/MohamedMankouchi/finalwork-mate",
+    siteLink: "https://mate-g8jc.onrender.com",
+    type: "Web",
+  },
   {
     name: "Quiz.IO",
     img: Quiz,
